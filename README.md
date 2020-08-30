@@ -1,1 +1,1 @@
-# Wilks-formula
+# Strength-formulas
