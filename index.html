@@ -6,8 +6,79 @@
   <meta name="Joshua Serpis" content="name">
   <meta name="A formua in which can be used to calculate a strength athletes true strength level " content="description here">
   <meta name="keywords" content="keywords,here">
+  <link rel="stylesheet" href="stylesheet.css">
+  <script src="formula.js"></script>
   </head>
   <body>
-  
+    <div id="background">
+     <div id="title">
+       <h1>IPF GL Points Calculator</h1>
+     </div>
+
+     <div id="points">
+       <h2 id="display-glp"></h2>
+       <h3 id="display-dots"></h3>
+     </div>
+   </div>
+
+   <div id="form-card">
+     <div id="inner-form">
+       <div class="field">
+         <label for="total" class="label-number">Total</label>
+         <input type="number" id="total" name="total" min="0" step="2.5" oninput="calc()">
+       </div>
+
+       <div class="field">
+         <label for="bodyweight" class="label-number">Bodyweight</label>
+         <input type="number" id="bodyweight" name="bodyweight" min="0" step="0.1" oninput="calc()">
+       </div>
+
+       <div class="radio-group">
+         <div class="radio-field">
+           <input type="radio" id="kilograms" name="units" value="kg" onchange="calc()" checked>
+           <label for="kilograms" class="label-radio">Kilos</label>
+         </div>
+         <div class="radio-field">
+           <input type="radio" id="pounds" name="units" value="lbs" onchange="calc()">
+           <label for="pounds" class="label-radio">Pounds</label>
+         </div>
+       </div>
+
+       <div class="radio-group">
+         <div class="radio-field">
+           <input type="radio" id="men" name="sex" value="M" onchange="calc()" checked>
+           <label for="men" class="label-radio">Men</label>
+         </div>
+         <div class="radio-field">
+           <input type="radio" id="women" name="sex" value="F" onchange="calc()">
+           <label for="women" class="label-radio">Women</label>
+         </div>
+       </div>
+
+       <div class="radio-group">
+         <div class="radio-field">
+           <input type="radio" id="raw" name="equipment" value="Raw" onchange="calc()" checked>
+           <label for="raw" class="label-radio">Raw</label>
+         </div>
+         <div class="radio-field">
+           <input type="radio" id="single" name="equipment" value="Single-ply" onchange="calc()">
+           <label for="single" class="label-radio">Single-ply</label>
+         </div>
+       </div>
+
+       <div class="radio-group last">
+         <div class="radio-field">
+           <input type="radio" id="sbd" name="event" value="SBD" onchange="calc()" checked>
+           <label for="sbd" class="label-radio">3-Lift</label>
+         </div>
+         <div class="radio-field">
+           <input type="radio" id="b" name="event" value="B" onchange="calc()">
+           <label for="b" class="label-radio">Bench</label>
+         </div>
+       </div>
+
+       <input type="button" value="Calculate" id="calculate" onclick="calc()">
+     </div>
+   </div>
   </body>
 </html>
