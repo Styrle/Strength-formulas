@@ -1,3 +1,4 @@
+//New dots calculation
 function dots_poly(a,b,c,d,e,x) {
         var x2=x*x,x3=x2*x,x4=x3*x;
         return 500.0 / (a*x4+b*x3+c*x2+d*x+e);
@@ -10,7 +11,7 @@ function dots_poly(a,b,c,d,e,x) {
         bw = Math.min(Math.max(bw, 40.0), 150.0);
         return dots_poly(-0.0000010706,0.0005158568,-0.1126655495,13.6175032,-57.96288,bw);
       }
-
+      //Setting up our variables which we can then use in our equation
       var PARAMETERS = {
         "M": {
           "Raw": {
